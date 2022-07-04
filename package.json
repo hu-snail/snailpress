@@ -1,0 +1,39 @@
+{
+  "name": "snailpress",
+  "private": true,
+  "version": "0.0.0",
+  "description": "powered static site generator",
+  "keywords": [
+    "vite",
+    "vue",
+    "snailpress"
+  ],
+  "author": "hu-snail",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "format": "prettier --check --write .",
+    "format-fail": "prettier --check .",
+    "lint": "pnpm run format",
+    "lint-fail": "pnpm run format-fail"
+  },
+  "dependencies": {
+    "vue": "^3.2.25",
+    "vue-router": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "escape-html": "^1.0.3",
+    "markdown-it": "^13.0.1",
+    "markdown-it-container": "^3.0.0",
+    "marked": "^4.0.17",
+    "prettier": "^2.7.1",
+    "prismjs": "^1.28.0",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.9",
+    "vite-plugin-markdown": "^2.0.2",
+    "vue-tsc": "^0.34.7"
+  }
+}
