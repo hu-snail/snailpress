@@ -28,7 +28,6 @@
     "escape-html": "^1.0.3",
     "markdown-it": "^13.0.1",
     "markdown-it-container": "^3.0.0",
-    "marked": "^4.0.17",
     "prettier": "^2.7.1",
     "prismjs": "^1.28.0",
     "typescript": "^4.5.4",
