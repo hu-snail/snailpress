@@ -4,14 +4,15 @@
   >
     <div class="max-w-screen-2xl mx-auto">
       <div
-        class="py-4 border-b border-slate-900/10 lg:px-8 lg:border-0 dark:border-slate-300/10 mx-4 lg:mx-0"
+        class="border-b border-slate-900/10 lg:px-8 lg:border-0 dark:border-slate-300/10 mx-4 lg:mx-0"
       >
         <div class="relative flex items-center">
           <a
-            class="mr-3 flex-none w-[2.0625rem] overflow-hidden md:w-auto"
+            class="mr-3 flex items-center w-[2.0625rem] overflow-hidden md:w-auto"
             herf="#"
             >
-                <SvgIcon name="logo"/>
+                <SvgIcon name="logo" size="64px"/>
+                <h1 class="px-2 text-xl sm:text-xl font-bold text-slate-900 tracking-tight dark:text-slate-200 ">SnailPress</h1>
             </a
           >
           <div class="relative hidden lg:flex items-center ml-auto">

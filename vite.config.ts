@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import AutoImport from 'unplugin-auto-import/vite';
-
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 // https://github.com/hmsk/vite-plugin-markdown
 import mdPlugin, { Mode } from 'vite-plugin-markdown'
 import markdownIt from 'markdown-it'
@@ -14,7 +14,6 @@ import {
 } from './src/plugin/markdown'
 
 import {svgBuilder} from './src/plugin/svgbuild'
-import {} from 'vite-plugin-svg-icons';
 // https://vitejs.dev/config/
 export default defineConfig(async () => {
   return {
@@ -39,8 +38,8 @@ export default defineConfig(async () => {
           .use(highlightLinePlugin)
           .use(headingPlugin)
       }),
-      viteSvgIcons({
-        iconDirs: [resolve(__dirname, './src/icons/svg')]
+      createSvgIconsPlugin({
+        iconDirs: [resolve(__dirname, './src/assets/')],
       })
     ]
   }
