@@ -37,3 +37,6 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgba(144, 147, 153, 0.3);
 }
+:not(svg) {
+  transform-origin: 0px 0px;
+}

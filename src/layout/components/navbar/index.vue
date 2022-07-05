@@ -10,7 +10,9 @@
           <a
             class="mr-3 flex-none w-[2.0625rem] overflow-hidden md:w-auto"
             herf="#"
-            >LOGO</a
+            >
+                <SvgIcon name="logo"/>
+            </a
           >
           <div class="relative hidden lg:flex items-center ml-auto">
             <nav
