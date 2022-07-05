@@ -14,7 +14,7 @@ defineProps({
 </script>
 <template>
   <article
-    class="prose prose-slate prose-img:rounded-xl max-w-none"
+    class="prose prose-slate dark:prose-invert prose-img:rounded-xl max-w-none"
     v-html="content"
   ></article>
 </template>
