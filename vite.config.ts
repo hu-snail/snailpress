@@ -12,7 +12,8 @@ import {
 } from './src/plugin/markdown'
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(async() => {
+  return {
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src')
@@ -22,10 +23,11 @@ export default defineConfig({
     vue(),
     mdPlugin({
       mode: [Mode.HTML, Mode.TOC, Mode.VUE],
-      markdownIt: markdownIt({ html: true, highlight })
+      markdownIt: markdownIt({ html: true, highlight: await highlight('monokai') })
         .use(containerPlugin)
         .use(highlightLinePlugin)
         .use(headingPlugin)
     })
   ]
+}
 })
