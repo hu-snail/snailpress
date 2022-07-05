@@ -14,6 +14,10 @@
       type: String,
       default: '14px',
     },
+    width: {
+      type: String,
+      default: '1em'
+    }
   });
 
   const iconName = computed(() => `#icon-${props.name}`);
@@ -27,14 +31,13 @@
 
 <!-- eg: <SvgIcon name="vue" /> -->
 <template>
-  <svg :class="svgClass" v-bind="$attrs" :style="{ 'font-size': size, color: color }">
+  <svg :class="svgClass" v-bind="$attrs" :style="{ 'font-size': size, color, width }">
     <use :xlink:href="iconName" />
   </svg>
 </template>
 
 <style>
   .svg-icon {
-    width: 1em;
     height: 1em;
     vertical-align: middle;
     fill: currentColor;
