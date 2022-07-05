@@ -1,19 +1,20 @@
 <script lang="ts" setup>
-
 defineProps({
   content: {
     type: String,
-    required: true,
+    required: true
   },
   attributes: {
-    type: Object,
+    type: Object
   },
   toc: {
-    type: Object,
-  },
-});
+    type: Object
+  }
+})
 </script>
 <template>
-    <article v-html="content"></article>
+  <article
+    class="prose prose-slate prose-img:rounded-xl max-w-none"
+    v-html="content"
+  ></article>
 </template>
-

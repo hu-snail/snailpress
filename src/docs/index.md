@@ -4,9 +4,9 @@ description: Describe this awesome content
 path: intro
 name: 介绍
 tags:
-  - "great"
-  - "awesome"
-  - "rad"
+  - 'great'
+  - 'awesome'
+  - 'rad'
 ---
 
 # Application API

@@ -12,10 +12,11 @@ const router = createRouter({
     {
       path: '/',
       component: Site
-    }, {
-        path: '/docs',
-        component: DocsLayout,
-        children: docMenus
+    },
+    {
+      path: '/docs',
+      component: DocsLayout,
+      children: docMenus
     }
   ],
   scrollBehavior(to, from, savedPosition) {
