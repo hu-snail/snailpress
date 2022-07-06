@@ -12,7 +12,7 @@ module.exports = {
       '2xl': '1536px',
       '8xl': '1440px'
     },
-    
+
     extend: {}
   },
   plugins: [require('@tailwindcss/typography')]

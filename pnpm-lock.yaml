@@ -8,6 +8,7 @@ specifiers:
   '@vitejs/plugin-vue': ^2.3.3
   autoprefixer: ^10.4.7
   escape-html: ^1.0.3
+  html-entities: ^2.3.3
   markdown-it: ^13.0.1
   markdown-it-container: ^3.0.0
   postcss: ^8.4.14
@@ -35,6 +36,7 @@ devDependencies:
   '@vitejs/plugin-vue': 2.3.3_vite@2.9.13+vue@3.2.37
   autoprefixer: 10.4.7_postcss@8.4.14
   escape-html: 1.0.3
+  html-entities: 2.3.3
   markdown-it: 13.0.1
   markdown-it-container: 3.0.0
   postcss: 8.4.14
@@ -1159,6 +1161,10 @@ packages:
   /he/1.2.0:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
+    dev: true
+
+  /html-entities/2.3.3:
+    resolution: {integrity: sha512-DV5Ln36z34NNTDgnz0EWGBLZENelNAtkiFA4kyNOG2tDI6Mz1uSWiq1wAKdyjnJwyDiDO7Fa2SO1CTxPXL8VxA==}
     dev: true
 
   /htmlparser2/3.10.1:

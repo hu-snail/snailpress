@@ -69,38 +69,6 @@
           >
         </div>
       </footer>
-      <div
-        class="fixed z-20 top-[3.8125rem] bottom-0 right-[max(0px,calc(50%-48rem))] w-[19.5rem] py-10 px-8 overflow-y-auto hidden xl:block"
-      >
-        <h5
-          class="text-slate-900 font-semibold mb-4 text-sm leading-6 dark:text-slate-100"
-        >
-          On this page
-        </h5>
-        <ul class="text-slate-700 text-sm leading-6">
-          <li>
-            <a
-              href="#syntax-support"
-              class="block py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-              >Syntax support</a
-            >
-          </li>
-          <li>
-            <a
-              href="#intelli-sense-for-vs-code"
-              class="block py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-              >IntelliSense for VS Code</a
-            >
-          </li>
-          <li>
-            <a
-              href="#jet-brains-id-es"
-              class="block py-1 font-medium text-sky-500 dark:text-sky-400"
-              >JetBrains IDEs</a
-            >
-          </li>
-        </ul>
-      </div>
     </div>
   </div>
 </template>

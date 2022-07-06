@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { decode } from "html-entities";
 defineProps({
   content: {
     type: String,
@@ -50,4 +51,25 @@ defineProps({
     class="mt-8 prose prose-slate prose-a:text-indigo-500 prose-a:no-underline dark:prose-invert prose-img:rounded-xl max-w-none"
     v-html="content"
   ></article>
+  <div
+    class="fixed z-20 top-[3.8125rem] bottom-0 right-[max(0px,calc(50%-48rem))] w-[19.5rem] py-10 px-8 overflow-y-auto hidden xl:block"
+  >
+    <h5
+      class="text-slate-900 font-semibold mb-4 text-sm leading-6 dark:text-slate-100"
+    >
+      On this page
+    </h5>
+    <ul class="text-slate-700 border-l px-4 text-sm leading-6">
+      <template v-for="(item, index) in toc" :key="index">
+        <li v-if="item.level == 2">
+          <a
+            :href="`#${decode(item.content)}`"
+            v-html="decode(item.content)"
+            class="block py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
+            ></a
+          >
+        </li>
+      </template>
+    </ul>
+  </div>
 </template>

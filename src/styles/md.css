@@ -7,6 +7,12 @@
   margin: 8px 0;
   line-height: 24px;
 }
+.md-title:before {
+  display: block;
+  height: 72px;
+  margin-top: -72px;
+  content: "";
+}
 .prose code:not([class='code-card']) {
   color: #5065f6;
 }
