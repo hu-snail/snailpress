@@ -388,6 +388,20 @@ Assign a custom handler for runtime warnings from Vue.
   Warnings only work during development, so this config is ignored in production mode.
   :::
 
+  :::danger
+  Warnings only work during development, so this config is ignored in production mode.
+  :::
+
+  :::info
+  Warnings only work during development, so this config is ignored in production mode.
+  :::
+
+  :::details
+   ```js
+    const str = '111'
+  ```
+  :::
+
 - **Example**
 
   ```js

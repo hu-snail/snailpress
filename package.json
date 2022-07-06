@@ -20,6 +20,8 @@
     "lint-fail": "pnpm run format-fail"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.6.5",
+    "@heroicons/vue": "^1.0.6",
     "vue": "^3.2.25",
     "vue-router": "^4.1.0"
   },
@@ -28,7 +30,6 @@
     "@types/node": "^18.0.1",
     "@vitejs/plugin-vue": "^2.3.3",
     "autoprefixer": "^10.4.7",
-    "escape-html": "^1.0.3",
     "markdown-it": "^13.0.1",
     "markdown-it-container": "^3.0.0",
     "postcss": "^8.4.14",

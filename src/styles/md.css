@@ -3,6 +3,19 @@
   padding: 15px 20px;
   background-color: #292d3e !important;
 }
+.custom-block p {
+  margin: 8px 0;
+  line-height: 24px;
+}
+.prose code:not([class='code-card']){
+  color: #5065f6;
+}
+.prose code:not([class='code-card'])::before {
+  content: "";
+}
+.prose code:not([class='code-card'])::after {
+  content: "";
+}
 html {
   height: 100%;
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';

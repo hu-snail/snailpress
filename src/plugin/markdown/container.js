@@ -5,7 +5,7 @@ export const containerPlugin = (md) => {
     .use(...createContainer('info', 'INFO'))
     .use(...createContainer('warning', 'WARNING'))
     .use(...createContainer('danger', 'WARNING'))
-    .use(...createContainer('details', 'Details'))
+    .use(...createContainer('details', 'DETAILS'))
     // explicitly escape Vue syntax
     .use(container, 'v-pre', {
       render: (tokens, idx) =>
@@ -27,7 +27,7 @@ function createContainer(klass, defaultTitle) {
               info ? `<summary>${info}</summary>` : ''
             }\n`
           }
-          return `<div class="${klass} custom-block"><p class="custom-block-title">${
+          return `<div class="${klass} ${getBorderColor(klass)} borderg my-2 custom-block border rounded-md px-4 bg-gray-100 dark:bg-slate-800"><p class="custom-block-title font-bold">${
             info || defaultTitle
           }</p>\n`
         } else {
@@ -36,4 +36,14 @@ function createContainer(klass, defaultTitle) {
       }
     }
   ]
+}
+
+function getBorderColor (type) {
+  return {
+    'tip': 'border-indigo-500 text-indigo-500 bg-indigo-50',
+    'warning': 'border-yellow-500 text-yellow-500 bg-yellow-50 ',
+    'danger': 'border-red-500 text-red-500 bg-red-50',
+    'info': 'text-gray-600 dark:text-gray-200',
+    'detail': 'text-gray-600'
+  }[type]
 }

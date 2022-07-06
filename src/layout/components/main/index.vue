@@ -70,7 +70,7 @@
         </div>
       </footer>
       <div
-        class="fixed z-20 top-[3.8125rem] bottom-0 right-[max(0px,calc(50%-50rem))] w-[19.5rem] py-10 px-8 overflow-y-auto hidden xl:block"
+        class="fixed z-20 top-[3.8125rem] bottom-0 right-[max(0px,calc(50%-48rem))] w-[19.5rem] py-10 px-8 overflow-y-auto hidden xl:block"
       >
         <h5
           class="text-slate-900 font-semibold mb-4 text-sm leading-6 dark:text-slate-100"
