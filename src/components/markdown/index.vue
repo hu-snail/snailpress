@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { decode } from "html-entities";
+import { parseCodeHeader } from '../../utils/parseHeader'
 defineProps({
   content: {
     type: String,
@@ -63,8 +63,8 @@ defineProps({
       <template v-for="(item, index) in toc" :key="index">
         <li v-if="item.level == 2">
           <a
-            :href="`#${decode(item.content)}`"
-            v-html="decode(item.content)"
+            :href="`#${parseCodeHeader(item.content)}`"
+            v-html="item.content"
             class="block py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
             ></a
           >

@@ -5,7 +5,6 @@ import Site from '@/layout/site.vue'
 import DocsLayout from '@/layout/docs.vue'
 
 import { docMenus } from './docs'
-
 const router = createRouter({
   history: createWebHistory(),
   routes: [
