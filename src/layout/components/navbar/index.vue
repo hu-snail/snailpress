@@ -10,11 +10,14 @@
           <a
             class="mr-3 flex items-center w-[2.0625rem] overflow-hidden md:w-auto"
             herf="#"
-            >
-                <SvgIcon name="logo" size="20px" width="3em"/>
-                <h1 class="px-2  text-xl sm:text-xl font-bold text-slate-900 tracking-tight dark:text-slate-200 ">SnailPress</h1> 
-            </a
           >
+            <SvgIcon name="logo" size="20px" width="3em" />
+            <h1
+              class="px-2 text-xl sm:text-xl font-bold text-slate-900 tracking-tight dark:text-slate-200"
+            >
+              SnailPress
+            </h1>
+          </a>
           <div class="relative hidden lg:flex items-center ml-auto">
             <nav
               class="text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200"

@@ -47,7 +47,7 @@ defineProps({
     </p>
   </header>
   <article
-    class="mt-8 prose prose-slate dark:prose-invert prose-img:rounded-xl max-w-none"
+    class="mt-8 prose prose-slate prose-a:text-indigo-500 prose-a:no-underline dark:prose-invert prose-img:rounded-xl max-w-none"
     v-html="content"
   ></article>
 </template>

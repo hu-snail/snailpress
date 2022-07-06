@@ -397,9 +397,11 @@ Assign a custom handler for runtime warnings from Vue.
   :::
 
   :::details
-   ```js
-    const str = '111'
+
+  ```js
+  const str = '111'
   ```
+
   :::
 
 - **Example**

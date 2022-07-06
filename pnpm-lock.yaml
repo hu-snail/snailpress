@@ -7,6 +7,7 @@ specifiers:
   '@types/node': ^18.0.1
   '@vitejs/plugin-vue': ^2.3.3
   autoprefixer: ^10.4.7
+  escape-html: ^1.0.3
   markdown-it: ^13.0.1
   markdown-it-container: ^3.0.0
   postcss: ^8.4.14
@@ -33,6 +34,7 @@ devDependencies:
   '@types/node': 18.0.1
   '@vitejs/plugin-vue': 2.3.3_vite@2.9.13+vue@3.2.37
   autoprefixer: 10.4.7_postcss@8.4.14
+  escape-html: 1.0.3
   markdown-it: 13.0.1
   markdown-it-container: 3.0.0
   postcss: 8.4.14
@@ -928,6 +930,10 @@ packages:
   /escalade/3.1.1:
     resolution: {integrity: sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==}
     engines: {node: '>=6'}
+    dev: true
+
+  /escape-html/1.0.3:
+    resolution: {integrity: sha512-NiSupZ4OeuGwr68lGIeym/ksIZMJodUGOSCZ/FSnTxcrekbvqrgdUxlJOMpijaKZVjAJrWrGs/6Jy8OMuyj9ow==}
     dev: true
 
   /escape-string-regexp/1.0.5:

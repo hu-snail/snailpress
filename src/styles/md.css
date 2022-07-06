@@ -7,14 +7,14 @@
   margin: 8px 0;
   line-height: 24px;
 }
-.prose code:not([class='code-card']){
+.prose code:not([class='code-card']) {
   color: #5065f6;
 }
 .prose code:not([class='code-card'])::before {
-  content: "";
+  content: '';
 }
 .prose code:not([class='code-card'])::after {
-  content: "";
+  content: '';
 }
 html {
   height: 100%;
