@@ -21,7 +21,7 @@ const router = createRouter({
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {
       nextTick(() => {
-        const el = document.querySelector(to.hash)
+        const el = document.getElementById(to.hash)
         if (el) el.scrollIntoView()
       })
     }

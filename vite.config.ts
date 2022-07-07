@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import AutoImport from 'unplugin-auto-import/vite'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import topLevelAwait from 'vite-plugin-top-level-await'
 // https://github.com/hmsk/vite-plugin-markdown
 import mdPlugin, { Mode } from 'vite-plugin-markdown'
 import markdownIt from 'markdown-it'
@@ -39,6 +40,12 @@ export default defineConfig(async () => {
       }),
       createSvgIconsPlugin({
         iconDirs: [resolve(__dirname, './src/assets/')]
+      }),
+      topLevelAwait({
+        // The export name of top-level await promise for each chunk module
+        promiseExportName: '__tla',
+        // The function to generate import names of top-level await promise in each chunk module
+        promiseImportName: i => `__tla_${i}`
       })
     ]
   }

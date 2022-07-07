@@ -12,7 +12,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "format": "prettier --check --write .",
     "format-fail": "prettier --check .",
@@ -42,6 +42,7 @@
     "vite": "^2.9.9",
     "vite-plugin-markdown": "^2.0.2",
     "vite-plugin-svg-icons": "^2.0.1",
+    "vite-plugin-top-level-await": "^1.0.1",
     "vue-tsc": "^0.34.7"
   }
 }
