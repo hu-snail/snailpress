@@ -16,7 +16,11 @@ import {
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => {
+  const root = process.cwd();
   return {
+    base: './',
+    root,
+    publicDir: 'public',
     resolve: {
       alias: {
         '@': resolve(__dirname, 'src')
@@ -47,6 +51,17 @@ export default defineConfig(async () => {
         // The function to generate import names of top-level await promise in each chunk module
         promiseImportName: i => `__tla_${i}`
       })
-    ]
+    ],
+    server: {
+      host: true,
+    },
+    build: {
+      target: 'es2015',
+      brotliSize: false,
+      outDir: 'dist',
+      assetsDir: 'static/',
+      assetsPublicPath: './',
+      chunkSizeWarningLimit: 2000,
+    }
   }
 })

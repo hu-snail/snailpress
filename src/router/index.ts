@@ -1,23 +1,24 @@
 import { nextTick } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
-
-import Site from '@/layout/site.vue'
-import DocsLayout from '@/layout/docs.vue'
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
 import { docMenus } from './docs'
+
+const routes: Array<RouteRecordRaw> = [
+  {
+    path: '/',
+    name: 'Site',
+    component: () => import('@/layout/site.vue')
+  },
+  {
+    path: '/docs',
+    name: 'Docs',
+    component: () => import('@/layout/docs.vue'),
+    children: docMenus
+  }
+]
 const router = createRouter({
-  history: createWebHistory(),
-  routes: [
-    {
-      path: '/',
-      component: Site
-    },
-    {
-      path: '/docs',
-      component: DocsLayout,
-      children: docMenus
-    }
-  ],
+  history: createWebHashHistory(),
+  routes,
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {
       nextTick(() => {
