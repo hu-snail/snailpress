@@ -36,7 +36,7 @@ export const parseHeader = compose(
   trim
 )
 
-export const parseCodeHeader = (content:string) => {
-    return content.replace(/<\/?.+?>/g, "")
- }
+export const parseCodeHeader = (content: string) => {
+  return content.replace(/<\/?.+?>/g, '')
+}
 export const deeplyParseHeader = compose(removeNonCodeWrappedHTML, parseHeader)

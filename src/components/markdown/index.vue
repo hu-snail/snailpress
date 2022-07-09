@@ -66,8 +66,7 @@ defineProps({
             :href="`#${parseCodeHeader(item.content)}`"
             v-html="item.content"
             class="block py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-            ></a
-          >
+          ></a>
         </li>
       </template>
     </ul>

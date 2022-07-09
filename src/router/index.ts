@@ -9,7 +9,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Site',
     component: () => import('@/layout/site.vue')
   },
-  
+
   {
     path: '/docs',
     name: 'Docs',

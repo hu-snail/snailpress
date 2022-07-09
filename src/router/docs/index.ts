@@ -8,12 +8,16 @@ const md = (
 ) => h(Markdown, { content, attributes, toc, key: content })
 const modules = import.meta.globEager('@/docs/**')
 
-let docsMenus:Array<RouteRecordRaw> = []
+let docsMenus: Array<RouteRecordRaw> = []
 for (const key in modules) {
   if (key.indexOf('.md') !== -1) {
     const { html, attributes, toc } = modules[key]
     const { path, name } = attributes
-    docsMenus.push({ path, component: () => Promise.resolve(md(html, attributes, toc)), name })
+    docsMenus.push({
+      path,
+      component: () => Promise.resolve(md(html, attributes, toc)),
+      name
+    })
   } else console.error('The file suffix can only be ".md":' + key)
 }
 

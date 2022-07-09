@@ -4,13 +4,12 @@ import { resolve } from 'path'
 import AutoImport from 'unplugin-auto-import/vite'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import topLevelAwait from 'vite-plugin-top-level-await'
-// https://github.com/hmsk/vite-plugin-markdown
 import mdPlugin, { Mode } from 'vite-plugin-markdown'
-import markdownIt from 'markdown-it'
+const MarkdownIt = require('markdown-it')
+
 import {
   containerPlugin,
   highlight,
-  highlightLinePlugin,
   headingPlugin
 } from './src/plugin/markdown'
 
@@ -18,7 +17,7 @@ import legacy from '@vitejs/plugin-legacy'
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => {
-  const root = process.cwd();
+  const root = process.cwd()
   return {
     base: '/',
     root,
@@ -40,12 +39,11 @@ export default defineConfig(async () => {
       }),
       mdPlugin({
         mode: [Mode.HTML, Mode.TOC, Mode.VUE],
-        markdownIt: markdownIt({
+        markdownIt: MarkdownIt({
           html: true,
-          highlight: await highlight('monokai')
+          highlight: await highlight()
         })
           .use(containerPlugin)
-          .use(highlightLinePlugin)
           .use(headingPlugin)
       }),
       createSvgIconsPlugin({
@@ -55,20 +53,20 @@ export default defineConfig(async () => {
         // The export name of top-level await promise for each chunk module
         promiseExportName: '__tla',
         // The function to generate import names of top-level await promise in each chunk module
-        promiseImportName: i => `__tla_${i}`
+        promiseImportName: (i) => `__tla_${i}`
       })
     ],
     server: {
-      host: true,
+      host: true
     },
-    
+
     build: {
       target: 'es2015',
       brotliSize: false,
       outDir: 'dist',
       assetsDir: 'static/',
       assetsPublicPath: './',
-      chunkSizeWarningLimit: 2000,
+      chunkSizeWarningLimit: 2000
     }
   }
 })

@@ -11,7 +11,7 @@ tags:
 
 # Application API
 
-## `createApp()`  **rv**
+## `createApp()` **rv**
 
 Creates an application instance.
 

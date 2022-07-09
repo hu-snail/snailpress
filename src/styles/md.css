@@ -11,7 +11,7 @@
   display: block;
   height: 72px;
   margin-top: -72px;
-  content: "";
+  content: '';
 }
 .prose code:not([class='code-card']) {
   color: #5065f6;
