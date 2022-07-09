@@ -12,8 +12,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
+    "build": "cross-env NODE_ENV=productio vite build",
+    "preview": "cross-env vite preview",
     "format": "prettier --check --write .",
     "format-fail": "prettier --check .",
     "lint": "pnpm run format",
@@ -28,8 +28,10 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.2",
     "@types/node": "^18.0.1",
+    "@vitejs/plugin-legacy": "^1.8.2",
     "@vitejs/plugin-vue": "^2.3.3",
     "autoprefixer": "^10.4.7",
+    "cross-env": "^7.0.3",
     "escape-html": "^1.0.3",
     "markdown-it": "^13.0.1",
     "markdown-it-container": "^3.0.0",

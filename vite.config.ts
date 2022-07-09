@@ -14,11 +14,13 @@ import {
   headingPlugin
 } from './src/plugin/markdown'
 
+import legacy from '@vitejs/plugin-legacy'
+
 // https://vitejs.dev/config/
 export default defineConfig(async () => {
   const root = process.cwd();
   return {
-    base: './',
+    base: '/',
     root,
     publicDir: 'public',
     resolve: {
@@ -28,6 +30,10 @@ export default defineConfig(async () => {
     },
     plugins: [
       vue(),
+      legacy({
+        polyfills: ['es.promise.finally', 'es/map', 'es/set'],
+        modernPolyfills: ['es.promise.finally']
+      }),
       AutoImport({
         // 自动导入 Vue 相关函数，如：ref, reactive, toRef 等
         imports: ['vue']
@@ -55,6 +61,7 @@ export default defineConfig(async () => {
     server: {
       host: true,
     },
+    
     build: {
       target: 'es2015',
       brotliSize: false,

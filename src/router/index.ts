@@ -1,7 +1,7 @@
 import { nextTick } from 'vue'
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
-import { docMenus } from './docs'
+import { docsRouer } from './docs'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -9,15 +9,16 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Site',
     component: () => import('@/layout/site.vue')
   },
+  
   {
     path: '/docs',
     name: 'Docs',
     component: () => import('@/layout/docs.vue'),
-    children: docMenus
+    children: docsRouer
   }
 ]
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory('/'),
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {
