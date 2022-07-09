@@ -60,7 +60,7 @@ defineProps({
       On this page
     </h5>
     <ul class="text-slate-700 border-l px-4 text-sm leading-6">
-      <template v-for="(item, index) in toc" :key="index">
+      <template v-for="item in toc" :key="item.content">
         <li v-if="item.level == 2">
           <a
             :href="`#${parseCodeHeader(item.content)}`"
