@@ -4,12 +4,12 @@ import SnailNavbar from './components/navbar/index.vue'
 <template>
   <SnailNavbar />
   <div class="max-w-screen-2xl mx-auto">
-    <div class="py-4 lg:px-8 lg:border-0 mx-4 lg:mx-0">
+    <div class="py-4 lg:px-0 lg:border-0 mx-4 lg:mx-0">
       <div
-        class="relative -mt-[5.75rem] overflow-hidden bg-white pt-12 md:pt-[5.75rem]"
+        class="relative overflow-hidden bg-white dark:bg-slate-900 pt-6 md:pt-[1.75rem]"
       >
         <div
-          class="absolute inset-y-0 hidden w-full min-w-[1360px] bg-[url('/img/beams-templates-header.png')] bg-[length:2000px_100%] bg-[position:calc(50%_+_220px)_-50px] bg-no-repeat lg:block"
+          class="absolute inset-y-0 hidden w-full min-w-[1360px] bg-[length:2000px_100%] bg-[position:calc(50%_+_220px)_-50px] bg-no-repeat lg:block"
         ></div>
         <div class="mx-auto max-w-container px-4 pt-4 sm:px-6 lg:flex lg:px-8">
           <div
@@ -23,11 +23,13 @@ import SnailNavbar from './components/navbar/index.vue'
               </span>
             </div>
             <p
-              class="mt-4 text-3xl font-extrabold tracking-[-0.04em] text-black sm:text-5xl sm:leading-[3.5rem]"
+              class="mt-4 text-3xl font-extrabold tracking-[-0.04em] text-black dark:text-slate-300 sm:text-5xl sm:leading-[3.5rem]"
             >
               Generate your high-value static documents
             </p>
-            <p class="mt-4 text-base leading-7 text-slate-600">
+            <p
+              class="mt-4 text-base leading-7 text-slate-600 dark:text-slate-300"
+            >
               Vite & Vue3 & Tailwind powered static site generator.
             </p>
             <div class="mt-8 flex gap-4">
@@ -39,11 +41,13 @@ import SnailNavbar from './components/navbar/index.vue'
                   >→</span
                 ></a
               ><a
-                class="inline-flex justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-white/0 text-slate-900 ring-1 ring-slate-900/10 hover:bg-white/25 hover:ring-slate-900/15"
+                class="inline-flex justify-center rounded-lg text-sm dark:text-slate-300 font-semibold py-3 px-4 bg-white/0 text-slate-900 ring-1 ring-slate-900/10 hover:bg-white/25 hover:ring-slate-900/15"
                 href="/all-access"
                 ><span>
                   View on Github
-                  <span aria-hidden="true" class="text-black/25 ml-2 sm:inline"
+                  <span
+                    aria-hidden="true"
+                    class="text-black/25 dark:text-slate-300 ml-2 sm:inline"
                     >→</span
                   ></span
                 ></a
@@ -53,38 +57,31 @@ import SnailNavbar from './components/navbar/index.vue'
           <div class="relative z-10 hidden lg:block">
             <div class="mt-6 flex">
               <div class="relative flex-shrink-0 p-4">
-                <div
-                  class="relative z-10 overflow-hidden rounded shadow-xl ring-1 ring-slate-900/5"
-                >
-                  <img
-                    class="h-[404px] w-[336px]"
-                    src="../assets/logo.svg"
-                  />
-                </div>
-                <div class="z-0">
-                  <div
-                    class="absolute left-0 -right-12 top-0 h-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"
-                  ></div>
-                  <div
-                    class="absolute -top-8 bottom-0 left-12 w-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"
-                  ></div>
-                  <div
-                    class="absolute left-0 -right-12 bottom-14 h-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"
-                  ></div>
-                  <div
-                    class="absolute right-0 -top-2 -bottom-8 w-px bg-slate-900/[0.1] [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"
-                  ></div>
-                  <div
-                    class="absolute bottom-full right-10 -mb-px flex h-8 items-end overflow-hidden"
+                <div style="background-color: #292d3e " class="px-4  pt-4 border rounded-md">
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 42 10"
+                    fill="none"
+                    class="h-2.5 px-4 w-auto stroke-slate-500/30"
                   >
-                    <div class="flex -mb-px h-[2px] w-80 -scale-x-100">
-                      <div
-                        class="w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"
-                      ></div>
-                      <div
-                        class="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"
-                      ></div>
-                    </div>
+                    <circle cx="5" cy="5" r="4.5" fill="#f45"></circle>
+                    <circle cx="21" cy="5" r="4.5" fill="#ffc107"></circle>
+                    <circle cx="37" cy="5" r="4.5" fill="#4caf50"></circle>
+                  </svg>
+
+                  <div class="flex items-start text-sm" id="code">
+                    <pre
+                      class="shiki"
+                      style="background-color: #272822"
+                    ><code><span class="line"><span style="color: #88846F"># clone</span></span>
+<span class="line"><span style="color: #F8F8F2">git clone git@github.com:hu-snail/snailpress.git</span></span>
+<span class="line"><span style="color: #88846F"># cd project</span></span>
+<span class="line"><span style="color: #66D9EF">cd</span><span style="color: #F8F8F2"> snailpress</span></span>
+<span class="line"><span style="color: #88846F"># install</span></span>
+<span class="line"><span style="color: #F8F8F2">pnpm i</span></span>
+<span class="line"><span style="color: #88846F"># run dev</span></span>
+<span class="line"><span style="color: #F8F8F2">pnpm run dev</span></span>
+<span class="line"></span></code></pre>
                   </div>
                 </div>
               </div>
@@ -124,10 +121,14 @@ import SnailNavbar from './components/navbar/index.vue'
                   </svg>
                 </div>
                 <div class="ml-6">
-                  <h2 class="text-sm font-semibold leading-6 text-slate-900">
+                  <h2
+                    class="text-sm font-semibold leading-6 text-slate-900 dark:text-slate-300"
+                  >
                     Built with modern technologies
                   </h2>
-                  <p class="mt-2 text-sm leading-6 text-slate-700">
+                  <p
+                    class="mt-2 text-sm leading-6 text-slate-700 dark:text-slate-400"
+                  >
                     Each template is a well-structured Next.js project, giving
                     you a codebase that’s productive and enjoyable to work in.
                   </p>
@@ -159,10 +160,14 @@ import SnailNavbar from './components/navbar/index.vue'
                   </svg>
                 </div>
                 <div class="ml-6">
-                  <h2 class="text-sm font-semibold leading-6 text-slate-900">
+                  <h2
+                    class="text-sm font-semibold leading-6 text-slate-900 dark:text-slate-300"
+                  >
                     Easy to customize
                   </h2>
-                  <p class="mt-2 text-sm leading-6 text-slate-700">
+                  <p
+                    class="mt-2 text-sm leading-6 text-slate-700 dark:text-slate-400"
+                  >
                     Everything is styled with utility classes, just open the
                     markup in your editor and change whatever you want.
                   </p>
@@ -197,10 +202,14 @@ import SnailNavbar from './components/navbar/index.vue'
                   </svg>
                 </div>
                 <div class="ml-6">
-                  <h2 class="text-sm font-semibold leading-6 text-slate-900">
+                  <h2
+                    class="text-sm font-semibold leading-6 text-slate-900 dark:text-slate-300"
+                  >
                     Built by experts
                   </h2>
-                  <p class="mt-2 text-sm leading-6 text-slate-700">
+                  <p
+                    class="mt-2 text-sm leading-6 text-slate-700 dark:text-slate-400"
+                  >
                     All of the code follows Tailwind CSS best practices, because
                     it’s written by the same team who created and maintain the
                     framework.

@@ -15,6 +15,17 @@ tags:
 
 Creates an application instance.
 
+```shell
+# 01
+git clone git@github.com:hu-snail/snailpress.git
+# 02
+cd snailpress
+# 03
+pnpm i
+# 04
+pnpm run dev
+```
+
 - **Type**
 
   ```ts
