@@ -9,6 +9,8 @@ export const containerPlugin = (md: MarkdownIt) => {
     .use(...createContainer('warning', 'WARNING'))
     .use(...createContainer('danger', 'WARNING'))
     .use(...createContainer('details', 'DETAILS'))
+    .use(...createContainer('video', 'VIDEO'))
+    .use(...createContainer('audio', 'AUDIO'))
     // explicitly escape Vue syntax
     .use(container, 'v-pre', {
       render: (tokens: Token[], idx: number) =>
@@ -31,6 +33,16 @@ function createContainer(klass: string, defaultTitle: string): ContainerArgs {
             return `<details class="${klass} custom-block">${
               info ? `<summary>${info}</summary>` : ''
             }\n`
+          }
+          if (klass === 'video') {
+            return `<video preload="auto" playsinline controls width="320" height="240" controls>
+            <source src="${info}" type="video/mp4">
+          </video>`
+            }
+          if (klass === 'audio') {
+              return `<audio class="border" controls>
+              <source src="${info}" type="audio/mp3" />
+            </audio>`
           }
           return `<div class="${klass} ${getBorderColor(
             klass

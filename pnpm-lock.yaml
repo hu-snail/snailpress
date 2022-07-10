@@ -14,6 +14,7 @@ specifiers:
   escape-html: ^1.0.3
   markdown-it: ^13.0.1
   markdown-it-container: ^3.0.0
+  plyr: ^3.7.2
   postcss: ^8.4.14
   prettier: ^2.7.1
   shiki: ^0.10.1
@@ -31,6 +32,7 @@ specifiers:
 dependencies:
   '@headlessui/vue': 1.6.5_vue@3.2.37
   '@heroicons/vue': 1.0.6_vue@3.2.37
+  plyr: registry.npmmirror.com/plyr/3.7.2
   vue: 3.2.37
   vue-router: 4.1.0_vue@3.2.37
 
@@ -2363,7 +2365,6 @@ packages:
     name: core-js
     version: 3.23.3
     requiresBuild: true
-    dev: true
 
   registry.npmmirror.com/cross-env/7.0.3:
     resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/cross-env/-/cross-env-7.0.3.tgz}
@@ -2385,6 +2386,12 @@ packages:
       shebang-command: registry.npmmirror.com/shebang-command/2.0.0
       which: registry.npmmirror.com/which/2.0.2
     dev: true
+
+  registry.npmmirror.com/custom-event-polyfill/1.0.7:
+    resolution: {integrity: sha512-TDDkd5DkaZxZFM8p+1I3yAlvM3rSr1wbrOliG4yJiwinMZN8z/iGL7BTlDkrJcYTmgUSb4ywVCc3ZaUtOtC76w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/custom-event-polyfill/-/custom-event-polyfill-1.0.7.tgz}
+    name: custom-event-polyfill
+    version: 1.0.7
+    dev: false
 
   registry.npmmirror.com/debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/debug/-/debug-2.6.9.tgz}
@@ -2706,6 +2713,12 @@ packages:
       json5: registry.npmmirror.com/json5/1.0.1
     dev: true
 
+  registry.npmmirror.com/loadjs/4.2.0:
+    resolution: {integrity: sha512-AgQGZisAlTPbTEzrHPb6q+NYBMD+DP9uvGSIjSUM5uG+0jG15cb8axWpxuOIqrmQjn6scaaH8JwloiP27b2KXA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/loadjs/-/loadjs-4.2.0.tgz}
+    name: loadjs
+    version: 4.2.0
+    dev: false
+
   registry.npmmirror.com/magic-string/0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/magic-string/-/magic-string-0.25.9.tgz}
     name: magic-string
@@ -2741,6 +2754,24 @@ packages:
     version: 2.3.1
     engines: {node: '>=8.6'}
     dev: true
+
+  registry.npmmirror.com/plyr/3.7.2:
+    resolution: {integrity: sha512-I0ZC/OI4oJ0iWG9s2rrnO0YFO6aLyrPiQBq9kum0FqITYljwTPBbYL3TZZu8UJQJUq7tUWN18Q7ACwNCkGKABQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/plyr/-/plyr-3.7.2.tgz}
+    name: plyr
+    version: 3.7.2
+    dependencies:
+      core-js: registry.npmmirror.com/core-js/3.23.3
+      custom-event-polyfill: registry.npmmirror.com/custom-event-polyfill/1.0.7
+      loadjs: registry.npmmirror.com/loadjs/4.2.0
+      rangetouch: registry.npmmirror.com/rangetouch/2.0.1
+      url-polyfill: registry.npmmirror.com/url-polyfill/1.1.12
+    dev: false
+
+  registry.npmmirror.com/rangetouch/2.0.1:
+    resolution: {integrity: sha512-sln+pNSc8NGaHoLzwNBssFSf/rSYkqeBXzX1AtJlkJiUaVSJSbRAWJk+4omsXkN+EJalzkZhWQ3th1m0FpR5xA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/rangetouch/-/rangetouch-2.0.1.tgz}
+    name: rangetouch
+    version: 2.0.1
+    dev: false
 
   registry.npmmirror.com/regenerator-runtime/0.13.9:
     resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz}
@@ -2815,6 +2846,12 @@ packages:
     dependencies:
       is-number: registry.npmmirror.com/is-number/7.0.0
     dev: true
+
+  registry.npmmirror.com/url-polyfill/1.1.12:
+    resolution: {integrity: sha512-mYFmBHCapZjtcNHW0MDq9967t+z4Dmg5CJ0KqysK3+ZbyoNOWQHksGCTWwDhxGXllkWlOc10Xfko6v4a3ucM6A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/url-polyfill/-/url-polyfill-1.1.12.tgz}
+    name: url-polyfill
+    version: 1.1.12
+    dev: false
 
   registry.npmmirror.com/vite-plugin-top-level-await/1.0.1_vite@2.9.13:
     resolution: {integrity: sha512-nHuciClzfvKxnmsGuQtvk6HPe3+zVuC18FsltrYDFNLamckxTOqe9ztSvm45VzLmSoeFvjd7NjKj324tL6bhFQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite-plugin-top-level-await/-/vite-plugin-top-level-await-1.0.1.tgz}

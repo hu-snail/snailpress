@@ -55,7 +55,7 @@ import SnailNavbar from './components/navbar/index.vue'
             </div>
           </div>
           <div class="relative z-10 hidden lg:block">
-            <div class="mt-6 flex">
+            <div class="mt-16 flex">
               <div class="relative flex-shrink-0 p-4">
                 <div style="background-color: #292d3e " class="px-4  pt-4 border rounded-md">
                   <svg

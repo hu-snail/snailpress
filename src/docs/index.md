@@ -15,6 +15,12 @@ tags:
 
 Creates an application instance.
 
+:::video http://vjs.zencdn.net/v/oceans.mp4
+:::
+
+:::audio http://downsc.chinaz.net/Files/DownLoad/sound1/201906/11582.mp3
+:::
+
 ```shell
 # 01
 git clone git@github.com:hu-snail/snailpress.git
@@ -413,7 +419,6 @@ Assign a custom handler for runtime warnings from Vue.
   const str = '111'
   ```
 
-  :::
 
 - **Example**
 

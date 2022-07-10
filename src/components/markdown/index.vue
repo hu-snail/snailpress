@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { onMounted } from 'vue';
+import Plyr from 'plyr';
 import { parseCodeHeader } from '../../utils/parseHeader'
 defineProps({
   content: {
@@ -10,6 +12,16 @@ defineProps({
   },
   toc: {
     type: Object
+  }
+})
+onMounted(() => {
+  const videos = document.getElementsByTagName('video')
+  for(let i = 0; i < videos.length; i++) {
+    new Plyr(videos[i]);
+  }
+  const audios = document.getElementsByTagName('audio')
+  for(let i = 0; i < audios.length; i++) {
+    new Plyr(audios[i]);
   }
 })
 </script>
