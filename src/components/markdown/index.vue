@@ -2,6 +2,7 @@
 import { onMounted } from 'vue';
 import Plyr from 'plyr';
 import { parseCodeHeader } from '../../utils/parseHeader'
+import baseIcon from 'plyr/dist/plyr.svg'
 defineProps({
   content: {
     type: String,
@@ -17,11 +18,15 @@ defineProps({
 onMounted(() => {
   const videos = document.getElementsByTagName('video')
   for(let i = 0; i < videos.length; i++) {
-    new Plyr(videos[i]);
+    new Plyr(videos[i], {
+      iconUrl: baseIcon
+    });
   }
   const audios = document.getElementsByTagName('audio')
   for(let i = 0; i < audios.length; i++) {
-    new Plyr(audios[i]);
+    new Plyr(audios[i], {
+      iconUrl: baseIcon
+    });
   }
 })
 </script>

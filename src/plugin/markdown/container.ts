@@ -35,7 +35,7 @@ function createContainer(klass: string, defaultTitle: string): ContainerArgs {
             }\n`
           }
           if (klass === 'video') {
-            return `<video preload="auto" playsinline controls width="320" height="240" controls>
+            return `<video preload="auto" playsinline crossorigin controls width="320" height="240" controls>
             <source src="${info}" type="video/mp4">
           </video>`
             }
